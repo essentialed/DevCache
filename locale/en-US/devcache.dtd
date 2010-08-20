@@ -1,0 +1,10 @@
+<!ENTITY devcache.label "DevCache">
+<!ENTITY preferences.title "DevCache preferences">
+<!ENTITY extension.version "">
+<!ENTITY general.label "Options">
+<!ENTITY patterns.label "Patterns">
+<!ENTITY devcache.enable.label "Enable DevCache">
+<!ENTITY patterns.description "Enter regex patterns for sites you want to disable caching for. Examples: dev.example.com, example.com/test">
+<!ENTITY button.add.label "Add">
+<!ENTITY button.remove.label "Remove Pattern">
+<!ENTITY button.removeall.label "Remove All">

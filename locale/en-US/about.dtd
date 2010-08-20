@@ -1,0 +1,4 @@
+<!ENTITY about "About DevCache">
+<!ENTITY version "Version: {VERSION}">
+<!ENTITY createdBy "Created By: Wendall Cada">
+<!ENTITY homepage "Home Page: http://www.wendallcada.com/">
