@@ -30,12 +30,12 @@ var DevCacheOptions = {
 
     setVersion: function() {
         if ("@mozilla.org/extensions/manager;1" in Components.classes) {
-            var flashblockID = "{3d7eb24f-2740-49df-8937-200b1cc08f8a}";
+            var devcacheID = "devcache@wendallcada.com";
             var em = Components.classes["@mozilla.org/extensions/manager;1"]
                               .getService(Components.interfaces.nsIExtensionManager);
             if (!("getItemForID" in em))
                 return;
-            var version = em.getItemForID(flashblockID).version;
+            var version = em.getItemForID(devcacheID).version;
             var display = document.getElementById("devcacheVersion");
             if (display && version)
                 display.value = version;

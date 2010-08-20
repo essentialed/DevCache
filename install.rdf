@@ -5,7 +5,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>devcache@wendallcada.com</em:id>
     <em:name>DevCache</em:name>
-    <em:version>1.0.0</em:version>
+    <em:version>1.0.1</em:version>
     <em:description> URL Based Cache Blocker </em:description>
     <em:creator>Wendall Cada</em:creator>
     <!-- type 2 == extension -->
