@@ -4,12 +4,13 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>devcache@wendallcada.com</em:id>
+    <em:type>2</em:type>
     <em:name>DevCache</em:name>
-    <em:version>1.0.1</em:version>
+    <em:version>1.0.2</em:version>
     <em:description> URL Based Cache Blocker </em:description>
     <em:creator>Wendall Cada</em:creator>
-    <!-- type 2 == extension -->
-    <em:type>2</em:type>
+    <em:homepageURL>http://github.com/wendall911/DevCache</em:homepageURL>
+    <em:optionsURL>chrome://devcache/content/options.xul</em:optionsURL>
 
     <!-- Firefox -->
     <em:targetApplication>
