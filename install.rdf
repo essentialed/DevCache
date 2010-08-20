@@ -3,7 +3,7 @@
   xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>{fe1c1cb4-4171-40c0-97f0-89292dbb82fc}</em:id>
+    <em:id>devcache@wendallcada.com</em:id>
     <em:name>DevCache</em:name>
     <em:version>1.0.0</em:version>
     <em:description> URL Based Cache Blocker </em:description>
