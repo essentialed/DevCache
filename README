@@ -1,0 +1,8 @@
+Install xpi by clicking :)
+
+After restarting your browser, configure through the menu item in Tools->DevCache
+
+Simply add the regex patterns for domains you want to disable disk and memory 
+caching for. For example dev.example.com or http://www.example.com/dev/
+
+Enjoy!

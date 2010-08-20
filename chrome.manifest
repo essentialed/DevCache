@@ -1,8 +1,8 @@
-content devcache chrome/content/
-skin devcache classic/1.0 chrome/skin/
+content devcache content/
+skin devcache classic/1.0 skin/
 
 overlay chrome://browser/content/browser.xul chrome://devcache/content/ff-overlay.xul
 
 style chrome://global/content/customizeToolbar.xul chrome://devcache/skin/overlay.css
 
-locale devcache en-US chrome/locale/en-US/
+locale devcache en-US locale/en-US/

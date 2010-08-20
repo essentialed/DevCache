@@ -37,6 +37,13 @@ echo "Building chrome..."
 mkdir chrome
 
 if [ "debug" = "$1" ]; then
+    sed \
+        -e "s/^content  *\([^ ]*\)  *\([^ ]*\)/content \1 chrome\/\2/" \
+        -e "s/^skin  *\([^ ]*\)  *\([^ ]*\)  *\([^ ]*\)/skin \1 \2 chrome\/\3/" \
+        -e "s/^locale  *\([^ ]*\)  *\([^ ]*\)  *\([^ ]*\)/locale \1 \2 chrome\/\3/" \
+        chrome.manifest > tmp
+    cat tmp > chrome.manifest
+    rm tmp
     mv content/ chrome/
     mv skin/ chrome/
     mv locale/ chrome/
