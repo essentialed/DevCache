@@ -13,7 +13,7 @@ echo "Creating build directory ..."
 rm -rf build
 mkdir build
 echo "Copying files ..."
-cp -r chrome.manifest content COPYING defaults install.rdf LICENSE locale skin \
+cp -r chrome.manifest chrome COPYING defaults install.rdf LICENSE \
   build/
 cd build
 
@@ -26,7 +26,7 @@ if [ "debug" = "$1" ]; then
 fi
 
 echo "Building locales in chrome.manifest ..."
-for entry in locale/*; do
+for entry in chrome/locale/*; do
     entry=`basename $entry`
     if [ "$entry" != "en-US" ]; then
         echo "locale devcache $entry locale/$entry/" >> chrome.manifest
@@ -34,7 +34,6 @@ for entry in locale/*; do
 done
 
 echo "Building chrome..."
-mkdir chrome
 
 if [ "debug" = "$1" ]; then
     sed \
@@ -44,9 +43,6 @@ if [ "debug" = "$1" ]; then
         chrome.manifest > tmp
     cat tmp > chrome.manifest
     rm tmp
-    mv content/ chrome/
-    mv skin/ chrome/
-    mv locale/ chrome/
 else
     sed \
         -e "s/^content  *\([^ ]*\)  *\([^ ]*\)/content \1 jar:chrome\/devcache.jar!\/\2/" \
@@ -55,10 +51,11 @@ else
         chrome.manifest > tmp
     cat tmp > chrome.manifest
     rm tmp
+    cd chrome
     find content skin locale | sort | \
       zip -r -0 -@ "devcache.jar" > /dev/null
     rm -fr content/ skin/ locale/
-    mv devcache.jar chrome/
+    cd ..
 fi
 
 echo "Cleaning up ..."

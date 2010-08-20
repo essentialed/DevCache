@@ -1,8 +1,12 @@
-Install xpi by clicking :)
+Download xpi and open the file with Firefox.
 
-After restarting your browser, configure through the menu item in Tools->DevCache
+After restarting your browser, configure through the menu item in 
+Tools->DevCache or the Preferences button in manage addons dialog.
 
 Simply add the regex patterns for domains you want to disable disk and memory 
 caching for. For example dev.example.com or http://www.example.com/dev/
+
+sha256sum for releases:
+e80662691730a64af18bfdd35d8c38e8dabf02c32ae8be5538c9cf9bf61e8a09  xpi/devcache-1.0.2.xpi
 
 Enjoy!
