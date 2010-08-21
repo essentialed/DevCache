@@ -1,8 +1,8 @@
 var DevCacheUtils = {
 
-    prefs: Components.classes['@mozilla.org/preferences-service;1']
-      .getService(Components.interfaces.nsIPrefBranch)
-      .QueryInterface(Components.interfaces.nsIPrefBranchInternal),
+    prefs: Components.classes['@mozilla.org/preferences-service;1'].
+      getService(Components.interfaces.nsIPrefBranch).
+      QueryInterface(Components.interfaces.nsIPrefBranchInternal),
 
     _console: Components.classes['@mozilla.org/consoleservice;1'].
       getService(Components.interfaces.nsIConsoleService),
@@ -51,4 +51,4 @@ var DevCacheUtils = {
         }
     }
 
-}
+};

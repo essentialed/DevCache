@@ -15,7 +15,6 @@ var DevCacheOptions = {
 
     populatePatterns: function() {
         var patterns = DevCacheUtils.getPatterns().split(',');
-        var i;
         var patternList = document.getElementById('dc_patternlist');
         while(patternList.getRowCount() > 0) {
             patternList.removeItemAt(0);
@@ -31,8 +30,8 @@ var DevCacheOptions = {
     setVersion: function() {
         if ("@mozilla.org/extensions/manager;1" in Components.classes) {
             var devcacheID = "devcache@wendallcada.com";
-            var em = Components.classes["@mozilla.org/extensions/manager;1"]
-                              .getService(Components.interfaces.nsIExtensionManager);
+            var em = Components.classes["@mozilla.org/extensions/manager;1"].
+              getService(Components.interfaces.nsIExtensionManager);
             if (!("getItemForID" in em))
                 return;
             var version = em.getItemForID(devcacheID).version;
@@ -74,7 +73,7 @@ var DevCacheOptions = {
         var textbox = document.getElementById('dc_pattern');
         var pattern = textbox.value;
 
-        if(pattern.length == 0)
+        if(pattern.length === 0)
             return false;
 
         if(!this.checkPattern(pattern)) {
@@ -138,11 +137,11 @@ var DevCacheOptions = {
         var patternList = document.getElementById('dc_patternlist');
         var numRows = patternList.getRowCount();
         var patterns = '';
-        var i;
-        for(i = 0; i < numRows; i++) {
-            if(i != 0) patterns += ',';
+        for(var i = 0; i < numRows; i++) {
+            if(i !== 0) patterns += ',';
             patterns += patternList.getItemAtIndex(i).label;
         }
         return patterns;
     }
-}
+
+};
