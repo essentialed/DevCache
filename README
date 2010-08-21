@@ -8,5 +8,6 @@ caching for. For example dev.example.com or http://www.example.com/dev/
 
 sha256sum for releases:
 e80662691730a64af18bfdd35d8c38e8dabf02c32ae8be5538c9cf9bf61e8a09  xpi/devcache-1.0.2.xpi
+fa78b242305c1d0842bcf362d94659fc747749360e8e676d703976ce8215f2e5  xpi/devcache-1.0.3.xpi
 
 Enjoy!
